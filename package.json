@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-clients": "node scripts/generate-clients.mjs",
+    "clients:add": "node scripts/generate-clients.mjs add",
+    "clients:remove": "node scripts/generate-clients.mjs remove",
+    "clients:list": "node scripts/generate-clients.mjs list"
   },
   "dependencies": {
     "react": "^19.2.0",
