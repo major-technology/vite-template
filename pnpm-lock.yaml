@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       '@major-tech/resource-client':
-        specifier: ^0.1.3
-        version: 0.1.3
+        specifier: ^0.1.4
+        version: 0.1.4
       '@radix-ui/react-slot':
         specifier: ^1.2.4
         version: 1.2.4(@types/react@19.2.4)(react@19.2.0)
@@ -165,8 +165,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@major-tech/resource-client@0.1.3':
-    resolution: {integrity: sha512-FqfUuupXk+fNn90/E458eVsR8CMz+NGh2dhR4bC7aiTwn/S7I9z9UerSG3EwR1gO/MHe3EhzbGnlopQi6fPSlw==}
+  '@major-tech/resource-client@0.1.4':
+    resolution: {integrity: sha512-lDKEFid+8e4JAxFJNnkWfvy0vMWkcRl2n03GVPCPt7CkY0Sq8/1/ROTzEJavAKsUGlkAkQwCnGAl/Zt014v8fQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1413,7 +1413,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@major-tech/resource-client@0.1.3': {}
+  '@major-tech/resource-client@0.1.4': {}
 
   '@napi-rs/wasm-runtime@1.0.7':
     dependencies:
