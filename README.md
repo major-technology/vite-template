@@ -9,12 +9,26 @@ React 19 + TypeScript + Vite (rolldown-vite@7.2.2) + SWC
 - **Dev**: `pnpm dev`
 
 ## Resource Clients
-**CRITICAL**: All resource access MUST go through singleton clients in `/src/clients/`. 
 
-- Clients are pre-configured singletons - DO NOT generate new ones
-- DO NOT create resource clients outside `/src/clients/`
-- Base classes in `/src/lib/resource-client/`: `PostgresResourceClient`, `CustomApiResourceClient`, `HubSpotResourceClient`, `S3ResourceClient`
-- Scripts: `pnpm clients:list`, `pnpm clients:add`, `pnpm clients:remove`
+**CRITICAL**: All resource access MUST go through auto-generated clients from `@major-tech/resource-client`.
+
+### Using Generated Clients
+
+Import and use the auto-generated clients from `/src/clients/`:
+
+```typescript
+import { ordersDbClient } from './clients';
+
+const result = await ordersDbClient.invoke(
+  'SELECT * FROM orders WHERE user_id = $1',
+  [userId],
+  'fetch-user-orders'
+);
+
+if (result.ok) {
+  console.log(result.result.rows);
+}
+```
 
 ## UI Components
 **shadcn/ui**: Use exclusively for all UI components. Install components via npx as needed.
@@ -23,3 +37,4 @@ React 19 + TypeScript + Vite (rolldown-vite@7.2.2) + SWC
 - React 19 with TypeScript strict mode
 - Vite with SWC (Fast Refresh)
 - ESLint configured for React hooks + TypeScript
+- `@major-tech/resource-client` for all resource access
