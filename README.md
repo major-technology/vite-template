@@ -38,3 +38,7 @@ if (result.ok) {
 - Vite with SWC (Fast Refresh)
 - ESLint configured for React hooks + TypeScript
 - `@major-tech/resource-client` for all resource access
+
+
+## Developing
+Remember to lint and typecheck after all edits.
