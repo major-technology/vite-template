@@ -12,12 +12,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-clients": "node scripts/generate-clients.mjs",
-    "clients:add": "node scripts/generate-clients.mjs add",
-    "clients:remove": "node scripts/generate-clients.mjs remove",
-    "clients:list": "node scripts/generate-clients.mjs list"
+    "clients:add": "major-client add",
+    "clients:remove": "major-client remove",
+    "clients:list": "major-client list"
   },
   "dependencies": {
+    "@major-tech/resource-client": "^0.1.2",
     "@radix-ui/react-slot": "^1.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
