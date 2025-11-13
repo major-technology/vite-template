@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "build": "tsc && vite build",
+    "lint": "eslint . && tsc --noEmit",
     "preview": "vite preview",
     "clients:add": "major-client add",
     "clients:remove": "major-client remove",
