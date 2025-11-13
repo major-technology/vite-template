@@ -41,4 +41,4 @@ if (result.ok) {
 
 
 ## Developing
-Remember to lint and typecheck after all edits.
+Run `pnpm lint` to check if your changes actually work.
