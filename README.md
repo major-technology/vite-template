@@ -41,4 +41,5 @@ if (result.ok) {
 
 
 ## Developing
-Run `pnpm lint` to check if your changes actually work.
+- Run `pnpm lint` to check if your changes actually work.
+- All `invokes` of resource-clients should be put in `/src/actions`
