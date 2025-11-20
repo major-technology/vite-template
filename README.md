@@ -6,7 +6,7 @@ React 19 + TypeScript + Vite (rolldown-vite@7.2.2) + SWC
 - **Node**: >=22.12.0
 - **Package Manager**: pnpm >=8.0.0 (required)
 - **Install**: `pnpm install`
-- **Dev**: `pnpm dev`
+- **Dev**: `major app start`
 
 ## Resource Clients
 
