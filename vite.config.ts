@@ -1,5 +1,13 @@
 import { defineConfig, loadEnv } from 'vite'
+import type { ViteDevServer } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+
+const addHealthCheck = (server: ViteDevServer) => {
+  server.middlewares.use('/api/healthz', (_req, res) => {
+    res.statusCode = 200
+    res.end('ok')
+  })
+}
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -8,7 +16,15 @@ export default defineConfig(({ mode }) => {
   const apiTarget = env.MAJOR_API_BASE_URL || 'https://api.prod.major.build'
   
   return {
-    plugins: [react()],
+    plugins: [
+      react(),
+      {
+        name: 'health-check',
+        configureServer(server) {
+          addHealthCheck(server)
+        }
+      },
+    ],
     server: {
       proxy: {
         '/api': {
