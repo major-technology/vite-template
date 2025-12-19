@@ -1,6 +1,8 @@
+import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import type { ViteDevServer } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import { devConsoleCapture } from './src/plugins/dev-console-capture'
 
 const addHealthCheck = (server: ViteDevServer) => {
   server.middlewares.use('/api/healthz', (_req, res) => {
@@ -16,14 +18,21 @@ export default defineConfig(({ mode }) => {
   const apiTarget = env.MAJOR_API_BASE_URL || 'https://api.prod.major.build'
   
   return {
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
     plugins: [
       react(),
       {
         name: 'health-check',
         configureServer(server) {
           addHealthCheck(server)
-        }
+        },
       },
+      // DO NOT REMOVE: Used by major AI to capture console logs during development only
+      devConsoleCapture(),
     ],
     server: {
       proxy: {
