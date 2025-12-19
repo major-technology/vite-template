@@ -2,6 +2,7 @@ import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import type { ViteDevServer } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import { devConsoleCapture } from './src/plugins/dev-console-capture'
 
 const addHealthCheck = (server: ViteDevServer) => {
   server.middlewares.use('/api/healthz', (_req, res) => {
@@ -28,8 +29,9 @@ export default defineConfig(({ mode }) => {
         name: 'health-check',
         configureServer(server) {
           addHealthCheck(server)
-        }
+        },
       },
+      devConsoleCapture(),
     ],
     server: {
       proxy: {
