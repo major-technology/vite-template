@@ -31,7 +31,7 @@ export default defineConfig(({ mode }) => {
           addHealthCheck(server)
         },
       },
-      // Add dev console capture plugin
+      // DO NOT REMOVE: Used by major AI to capture console logs during development only
       devConsoleCapture(),
     ],
     server: {
