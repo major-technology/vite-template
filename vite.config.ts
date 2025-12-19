@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => {
           addHealthCheck(server)
         },
       },
+      // Add dev console capture plugin
       devConsoleCapture(),
     ],
     server: {
