@@ -2,7 +2,20 @@
 
 React 19 + TypeScript + Vite (rolldown-vite@7.2.2) + SWC
 
+## IMPORTANT: This is a Starter Template!
+
+**This is a blank canvas meant to be transformed into a real application.** When you receive instructions about what to build:
+
+1. **Update this CLAUDE.md file first** with project-specific context about the actual application. Also update README.md
+2. **Replace the placeholder content** with the real first page of the application
+3. **Build the application** according to the user's requirements
+
+## AI Assistant Instructions: Keep This File Updated
+
+**IMPORTANT:** When making significant changes to this codebase, you MUST update this CLAUDE.md file to reflect those changes. This ensures future AI assistants and developers have accurate context.
+
 ## Environment
+
 - **Node**: >=22.12.0
 - **Package Manager**: pnpm >=8.0.0 (required)
 - **Install**: `pnpm install`
@@ -17,12 +30,12 @@ React 19 + TypeScript + Vite (rolldown-vite@7.2.2) + SWC
 Import and use the auto-generated clients from `/src/clients/`:
 
 ```typescript
-import { ordersDbClient } from './clients';
+import { ordersDbClient } from "./clients";
 
 const result = await ordersDbClient.invoke(
-  'SELECT * FROM orders WHERE user_id = $1',
+  "SELECT * FROM orders WHERE user_id = $1",
   [userId],
-  'fetch-user-orders'
+  "fetch-user-orders"
 );
 
 if (result.ok) {
@@ -31,16 +44,36 @@ if (result.ok) {
 ```
 
 ## UI Components
-**shadcn/ui**: Use exclusively for all UI components. Install components via npx as needed.
+
+**shadcn/ui**: Use exclusively for all UI components.
+
+### First-time Setup (Required)
+
+Before adding any shadcn/ui components, initialize shadcn in the project:
+
+```bash
+npx shadcn@latest init
+```
+
+Then install components as needed:
+
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add card
+# etc.
+```
+
+Remove this once shadcn is initialized
 
 ## Architecture
+
 - React 19 with TypeScript strict mode
 - Vite with SWC (Fast Refresh)
 - ESLint configured for React hooks + TypeScript
 - `@major-tech/resource-client` for all resource access
 
-
 ## Developing
+
 - Run `pnpm lint` to check if your changes actually work
 - Make sure to look at the `@major-tech/resource-client` package, the methods available and how to use them
 - All `invokes` of resource-clients should be put in `/src/actions`
