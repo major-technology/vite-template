@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       '@major-tech/resource-client':
-        specifier: ^0.2.7
-        version: 0.2.7
+        specifier: ^0.2.9
+        version: 0.2.9
       '@radix-ui/react-slot':
         specifier: ^1.2.4
         version: 1.2.4(@types/react@19.2.7)(react@19.2.3)
@@ -292,8 +292,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@major-tech/resource-client@0.2.7':
-    resolution: {integrity: sha512-q+yGp0CIbsS87ktyBHm/4Ynw1IrKLmrlQUJTdHi5M98YGEUJBA9wj/8eEYdlWvCpWnKODPC0kt7w03gxDe9Yng==}
+  '@major-tech/resource-client@0.2.9':
+    resolution: {integrity: sha512-mdDU2VYekIGDu/S6m2OztQ/D/wFnhUjRcAXZPXRXqV8g6kZkQGIIrYAVkdP/7+/BwaxcGaAuA57rrqoXuypW9A==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -2028,7 +2028,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@major-tech/resource-client@0.2.7':
+  '@major-tech/resource-client@0.2.9':
     dependencies:
       '@aws-sdk/client-dynamodb': 3.955.0
     transitivePeerDependencies:
