@@ -10,9 +10,9 @@ function App() {
           <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
             <Rocket className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-2xl">Welcome to Major!</CardTitle>
+          <CardTitle className="text-2xl">Major Starter Template</CardTitle>
           <CardDescription>
-            Build powerful applications with our resource clients and modern tooling.
+            Your starting point for building with Major. See the docs to get going.
           </CardDescription>
         </CardHeader>
         <CardFooter className="justify-center">
