@@ -1,23 +1,28 @@
-import './App.css'
+import { ExternalLink } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-white p-4 text-center font-sans">
-      <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-        Welcome to Major!
-      </h1>
-      <p className="text-lg text-gray-600">
-        Visit{' '}
-        <a 
-          href="https://docs.major.build" 
-          className="font-medium text-blue-600 hover:text-blue-500 hover:underline"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://docs.major.build
-        </a>{' '}
-        to view our documentation and start building.
-      </p>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
+      <Card className="w-full max-w-sm text-center">
+        <CardHeader className="items-center px-8 pt-8 pb-4">
+          <CardTitle className="text-2xl">Major Starter Template</CardTitle>
+          <CardDescription className="mt-2">
+            Your starting point for building with Major.
+            <br />
+            See the docs to get going.
+          </CardDescription>
+        </CardHeader>
+        <CardFooter className="justify-center px-8 pb-8">
+          <Button asChild>
+            <a href="https://docs.major.build" target="_blank" rel="noreferrer">
+              View Documentation
+              <ExternalLink />
+            </a>
+          </Button>
+        </CardFooter>
+      </Card>
     </div>
   )
 }

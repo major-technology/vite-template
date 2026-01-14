@@ -47,28 +47,33 @@ if (result.ok) {
 
 **shadcn/ui**: Use exclusively for all UI components.
 
-### First-time Setup (Required)
+### Configuration
 
-Before adding any shadcn/ui components, initialize shadcn in the project:
+shadcn/ui is configured with:
+- **Style**: Lyra
+- **Base color**: Zinc
+- **Icons**: lucide-react
+- **Font**: Inter (via Google Fonts)
+- **Dark mode**: System preference detection (automatic)
+
+### Adding Components
 
 ```bash
-npx shadcn@latest init
-```
-
-Then install components as needed:
-
-```bash
-npx shadcn@latest add button
-npx shadcn@latest add card
+pnpm dlx shadcn@latest add button
+pnpm dlx shadcn@latest add card
 # etc.
 ```
 
-Remove this once shadcn is initialized
+### Utilities
+
+- `cn()` utility for class merging: `import { cn } from "@/lib/utils"`
+- CSS variables defined in `src/index.css` for light/dark theming
 
 ## Architecture
 
 - React 19 with TypeScript strict mode
 - Vite with SWC (Fast Refresh)
+- Tailwind CSS + shadcn/ui for styling
 - ESLint configured for React hooks + TypeScript
 - `@major-tech/resource-client` for all resource access
 
